@@ -117,10 +117,10 @@ function animateCycle(batchIndex) {
 }
 
 // Quick CSS hack for the slash pseudo element
-document.head.insertAdjacentHTML("beforeend", \`<style>
+document.head.insertAdjacentHTML("beforeend", `<style>
 .slashed .old-price::after { opacity: 1; transform: rotate(-15deg) scaleX(1); transition: transform 0.4s ease-out, opacity 0.1s; }
 .old-price::after { opacity: 0; transform: rotate(-15deg) scaleX(0); }
-</style>\`);
+</style>`);
 
 // We'll add a simple tween to trigger the slash class
 gsap.ticker.add(() => {

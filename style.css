@@ -96,10 +96,16 @@ body { margin: 0; overflow: hidden; background: #000; font-family: 'Montserrat',
   width: 120%;
   height: 6px;
   background-color: #ef4444;
-  transform: rotate(-15deg);
-  box-shadow: 0 0 10px #ef4444;
+  transform: rotate(-15deg) scaleX(0);
   transform-origin: left center;
+  box-shadow: 0 0 10px #ef4444;
   opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.15s ease-out;
+}
+
+.old-price.slashed::after {
+  transform: rotate(-15deg) scaleX(1);
+  opacity: 1;
 }
 
 .new-price {
